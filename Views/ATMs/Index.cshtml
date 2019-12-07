@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CRUDATM.Models.ATMs>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ATMs</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipios.MunNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UFS.UfSigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AtmPC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AtmNOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipios.MunNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UFS.UfSigla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AtmPC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AtmNOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AtmID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AtmID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AtmID })
+        </td>
+    </tr>
+}
+
+</table>

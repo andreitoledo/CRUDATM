@@ -1,0 +1,50 @@
+﻿@model CRUDATM.Models.ATMs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ATMs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Municipios.MunNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Municipios.MunNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UFS.UfSigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UFS.UfSigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AtmPC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AtmPC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AtmNOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AtmNOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AtmID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
