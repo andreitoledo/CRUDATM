@@ -15,5 +15,6 @@ namespace CRUDATM.Models {
         public DbSet<ATMs> ATMs { get; set; }
         public DbSet<Municipios> Municipios { get; set; }
         public DbSet<UFS> UFS { get; set; }
+                
     }
 }

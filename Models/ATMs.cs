@@ -9,7 +9,11 @@ namespace CRUDATM.Models {
 
         [Key]
         public int AtmID { get; set; }
+
+        [Required(ErrorMessage = "O número do ATM é obrigatório.")]
         public string AtmPC { get; set; }
+
+        [Required(ErrorMessage = "A descrição do ATM é obrigatório.")]
         public string AtmNOME { get; set; }
 
         /* FK e coleção de objetos para Municipio */

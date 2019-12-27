@@ -20,6 +20,11 @@ namespace CRUDATM.Controllers
             return View(db.Municipios.ToList());
         }
 
+        // validação para não deixar repetir o atributo MunNome
+        public JsonResult ValidaNome(string MunNome) {
+            return Json(!db.Municipios.Any(x => x.MunNome == MunNome), JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Municipios/Details/5
         public ActionResult Details(int? id)
         {

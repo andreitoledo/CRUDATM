@@ -7,7 +7,7 @@
 <h2>ATMs</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.AtmNOME)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AtmID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AtmID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AtmID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.AtmID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.AtmID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.AtmID })
         </td>
     </tr>
 }

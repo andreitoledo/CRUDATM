@@ -20,6 +20,11 @@ namespace CRUDATM.Controllers
             return View(db.UFS.ToList());
         }
 
+        // validação para não deixar repetir o atributo UfNome
+        public JsonResult ValidaNome(string UfNome) {
+            return Json(!db.UFS.Any(x => x.UfNome == UfNome), JsonRequestBehavior.AllowGet);
+        }
+
         // GET: UFS/Details/5
         public ActionResult Details(int? id)
         {
